@@ -108,6 +108,7 @@ void* data = wrenSetSlotNewForeign(vm, 0, 0, 8);
 The value returned by `wrenSetSlotNewForeign()` is the raw pointer to the
 requested bytes. You can cast that to whatever C type makes sense (as long as it
 fits within the requested number of bytes) and initialize it as you see fit.
+The allocated bytes will all have been pre-initialized to 0.
 
 Any parameters passed to the constructor are also available in subsequent slots
 in the slot array. That way you can initialize the foreign data based on values
